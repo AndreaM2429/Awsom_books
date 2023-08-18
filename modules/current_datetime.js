@@ -1,7 +1,7 @@
-import { DateTime } from '../node_modules/luxon/src/luxon.js';
-
 const setdate = () => {
   const curDate = document.getElementById('now');
-  curDate.textContent = DateTime.now().toFormat('MMMM dd, yyyy HH:mm');
+  curDate.textContent = new Date().toDateString('en-us', {
+    weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
+  });
 };
 export default setdate;
